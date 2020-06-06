@@ -14,14 +14,4 @@ export default {
     }
     Vue.set(state.data, index, data)
   },
-  deleteDatum (state, id, key = 'id') {
-    const index = state.data.findIndex(datum => datum[key] === id)
-
-    if (0 > index) {
-      // Not found
-      return
-    }
-
-    state.data.splice(index, 1)
-  },
 }
